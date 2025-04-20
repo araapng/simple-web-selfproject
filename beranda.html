@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="icon.png" type="image/png">
+  <!DOCTYPE html>
+  <html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: url('hpbg.png') no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Press Start 2P', cursive;
+        overflow: hidden;
+      }
+
+      .logout-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ffb6c1;
+  color: #000;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  padding: 6px 12px;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 2px 2px #000;
+  transition: transform 0.2s, background-color 0.2s;
+  z-index: 1000;
+}
+
+.logout-btn:hover {
+  background-color: #ff9fc2;
+  transform: scale(1.1);
+}
+
+
+      h1 {
+        color: #ffffff;
+        text-shadow: 2px 2px #ff69b4;
+        margin-bottom: 40px;
+        font-size: 16px;
+        animation: fadeInDown 0.5s ease-out;
+      }
+  
+      .linktree-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        animation: fadeInUp 0.5s ease-out;
+      }
+  
+      .linktree-buttons a {
+        background-color: #b6c7ffd9;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 16px;
+        width: 260px;
+        text-align: center;
+        font-size: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        border: 2px dashed #ffffff;
+      }
+  
+      .linktree-buttons a:hover {
+        background-color: #576db6d9;
+        color: #ffffff;
+        transform: scale(1.08);
+      }
+  
+      @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-50px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+  
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(50px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .pixel-footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8px;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+  font-family: 'Press Start 2P', cursive;
+  opacity: 0.7;
+}
+    </style>
+  </head>
+
+  <footer class="pixel-footer">
+    <p>© 2025 zhr | Homepage </p>
+  </footer>
+
+  <body>
+    <button class="logout-btn" onclick="logout()">⏻ Logout</button>
+    <h1>WELCOME! -CLICK↓</h1>
+  
+    <div class="linktree-buttons">
+      <a href="lanadel.html" onclick="playClick()">Lana Del Rey</a>
+      <a href="sza.html" onclick="playClick()">SZA</a>
+      <a href="billie.html" onclick="playClick()">Billie Eilish</a>
+    </div>
+    
+      
+  
+    <!-- Suara Klik -->
+    <audio id="clickSound" src="assets/clicksound.mp3" preload="auto"></audio>
+  
+    <script>
+        function logout() {
+  // Simulasi logout: arahkan ke halaman login
+  window.location.href = "index.html";
+}
+
+      function playClick() {
+        const sound = document.getElementById("clickSound");
+        sound.currentTime = 0;
+        sound.play();
+      }
+    </script>
+  
+  </body>
+  </html>
+  

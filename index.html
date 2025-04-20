@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="icon.png" type="image/png">
+  <title>Login Page</title>
+
+  <!-- Font Retro -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    /* backgrounf*/
+    body {
+  background-image: url(bgpixel.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow:hidden;
+}
+
+
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Login box hologram*/
+    .login-box {
+  background-color: rgba(255, 192, 203, 0.8);
+  color: #880e4f;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px #ff99cc;
+  width: 320px;
+  animation: fadeIn 1s ease;
+}
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 12px;
+      color: #d81b60;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      font-family: 'Press Start 2P', cursive;
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #f48fb1;
+      border-radius: 8px;
+      font-size: 10px;
+      background-color: #fff0f6;
+      color: #ad1457;
+    }
+
+    input[type="submit"] {
+      background-color: #f06292;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 10px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ec407a;
+      transform: scale(1.05);
+    }
+
+    #message {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 10px;
+    }
+
+    label {
+      font-size: 10px;
+    }
+    .pixel-footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8px;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+  font-family: 'Press Start 2P', cursive;
+  opacity: 0.7;
+}
+  </style>
+</head>
+
+<footer class="pixel-footer">
+  <p>© 2025 zhr | login </p>
+</footer>
+
+<body>
+
+  <div class="login-box">
+    <h2>✨ LOGIN ✨</h2>
+    <form onsubmit="return loginUser()">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <label><input type="checkbox" onclick="togglePassword()"> Lihat Password</label>
+      <input type="submit" value="Masuk">
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function loginUser() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const message = document.getElementById("message");
+
+      const validUsername = "user1588";
+      const validPassword = "12345";
+
+      if (username === validUsername && password === validPassword) {
+        message.style.color = "#c2185b";
+        message.textContent = "Berhasil masuk!";
+        setTimeout(() => {
+          window.location.href = "beranda.html";
+        }, 1500);
+      } else {
+        message.style.color = "#ff1744";
+        message.textContent = "Username atau password salah!";
+      }
+
+      return false;
+    }
+
+    function togglePassword() {
+      const pw = document.getElementById("password");
+      pw.type = pw.type === "password" ? "text" : "password";
+    }
+  </script>
+
+</body>
+</html>
+

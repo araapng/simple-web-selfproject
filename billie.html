@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="assets/billieicon.png" type="image/png">
+  <title>Billie Eilish</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("assets/billiebg.png") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Press Start 2P', cursive;
+      color: #ccffe6;
+      text-shadow: 1px 1px 2px #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 90%;
+      max-width: 600px;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px #66ffcc;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #9fffe3;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 12px 0;
+      padding: 12px;
+      border-radius: 8px;
+      transition: transform 0.2s ease;
+    }
+
+    li:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    a {
+      color: #ccffe6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .pixel-btn-small {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #9fffe3;
+      color: #000;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      padding: 6px 10px;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 2px 2px #000;
+      transition: background-color 0.2s, transform 0.2s;
+      z-index: 999;
+    }
+
+    .pixel-btn-small:hover {
+      background-color: #7fffd4;
+      transform: scale(1.05);
+    }
+    .pixel-footer {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 8px;
+  color: #ffffff;
+  text-shadow: 1px 1px #000;
+  font-family: 'Press Start 2P', cursive;
+  opacity: 0.7;
+}
+  </style>
+</head>
+
+<footer class="pixel-footer">
+    <p>© 2025 zhr | SZA </p>
+  </footer>
+  
+<body>
+
+  <div class="container">
+    <h1>💚 Billie Eilish: Songs</h1>
+    <ul>
+      <li><a href="https://youtu.be/V9PVRfjEBTI?si=su8LLTU1D_O8Tw5C" target="_blank">Birds of a Feather</a></li>
+      <li><a href="https://youtu.be/l08Zw-RY__Q?si=wAlgObFCyLp2Ombd" target="_blank">Wildflower</a></li>
+      <li><a href="https://youtu.be/V1Pl8CzNzCw?si=mXvVeYtoLLKic-PA" target="_blank">Lovely</a></li>
+      <li><a href="https://youtu.be/BboMpayJomw?si=y37pkPPnc1PvnT-a" target="_blank">No Time to Die</a></li>
+      <li><a href="https://youtu.be/viimfQi_pUw?si=vqzhdQxmH5SnBClg" target="_blank">Ocean Eyes</a></li>
+    </ul>
+  </div>
+
+  <button class="pixel-btn-small" onclick="back()">⮌</button>
+
+  <script>
+    function back() {
+      window.location.href = "beranda.html";
+    }
+  </script>
+
+</body>
+</html>
